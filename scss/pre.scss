@@ -1,0 +1,62 @@
+/* OGTE color palette*/
+
+$black: #262B37;
+$white: #ffffff;
+$blue-10: #F2F5FF;
+$blue-90: #3E71F4;
+$blue-100: #2055DE;
+$gray-05: #F7F9FF;
+$gray-10: #F4F5FA;
+$gray-20: #ECEFFB;
+$gray-30: #D9DFF0;
+$gray-40: #CDD1E4;
+$gray-50: #BDC2DB;
+$gray-60: #A1A9CB;
+$gray-80: #787D95;
+$gray-90: #404d6a;
+$red-10: #FFEFEF;
+$red-100: #E82C2C;
+$green-10: #E3FFEE;
+$green-100: #0B8A3E;
+$purple-100: #800080;
+$purple-10: #fff1ff;
+
+/* Here we can override Boost variables in boost/scss/preset/default.scss */
+
+$primary: $blue-90;
+$secondary: $blue-10;
+$gray-100: $gray-10;
+$gray-300: $gray-40;
+$gray-500: $gray-60;
+$gray-600: $gray-60;
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $gray-90;
+  font-family: "Archivo-Bold", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.2px;
+}
+
+@font-face {
+    font-family: "Archivo-Bold";
+    src: url([[font:theme|Archivo-VariableFont.ttf]]) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Archivo-Regular";
+    src: url([[font:theme|Archivo-VariableFont.ttf]]) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+

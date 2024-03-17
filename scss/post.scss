@@ -1,0 +1,953 @@
+/*** Boost overrides ***/
+
+.btn,
+.custom-select,
+.activity-item,
+#page.drawers .main-inner,
+.card,
+input.form-control-lg,
+#frontpage-available-course-list .coursebox,
+#frontpage-course-list .coursebox,
+.course-search-result .coursebox,
+.login-container {
+  border-radius: 4px;
+}
+
+input.rounded {
+  border-radius: 4px !important;
+}
+
+.simplesearchform .input-group input.form-control {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.modal-content {
+  border-radius: 4px;
+}
+
+.card-img {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.btn-outline-secondary {
+  color: $gray-80;
+}
+
+.btn-primary {
+    background-color: $blue-90;
+    border-color: $blue-90;
+    height: 48px;
+    padding-left: 36px;
+    padding-right: 36px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: $blue-90;
+    padding: 12px 36px;
+    font-weight: 600;
+    border-radius: 6px;
+    border-color: $blue-90;
+
+    &:hover {
+        color: $blue-90;
+        border-color: $blue-90;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #page-wrapper #page {
+        padding: 12px;
+    }
+}
+
+.activity-item.activityinline {
+    padding: 0 !important;
+}
+
+.section .label .contentwithoutlink, 
+.section .label .activityinstance {
+    padding-right: 0;
+}
+
+
+/**************
+      OGTE 
+***************/
+
+/* LAYOUT */
+
+/* Hiding navbar, sidebars, footer, etc. to achieve the webpage appearence. */
+body:not(.editing) {
+    .navbar,
+    #page-header,
+    .secondary-navigation,
+    #frontpage-available-course-list, 
+    #frontpage-course-list, 
+    .course-search-result,
+    #page-footer {
+        display: none;
+    }
+}
+
+#page.drawers {
+    margin-top: 0;
+    height: 100%; 
+}
+
+.pagelayout-standard #page.drawers .main-inner, 
+body.limitedwidth #page.drawers .main-inner {
+    margin-top: 280px;
+    padding: 0;
+
+    @media (min-width: 576px) {
+        max-width: 1260px;
+        margin-top: 200px;
+    }
+
+    @media (min-width: 768px) {
+        margin-top: 220px;
+    }
+}
+
+
+.course-content ul.topics li.section, 
+.course-content ul.weeks li.section {
+    padding-bottom: 0;
+}
+
+#page-content.pb-3 {
+    padding-bottom: 0 !important;
+}
+
+/* Bringing the content to the top without positioning */
+.course-content {
+    margin-top: -300px;
+
+    @media (min-width: 576px) { 
+        margin-top: -220px;
+    }
+}
+
+
+.ogte-main-title {
+    /*position: absolute;
+    top: -300px;*/
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    margin-bottom: 24px;
+
+    @media (min-width: 576px) { 
+        font-size: 30px;
+        /*top: -218px;*/
+    }
+
+    @media (min-width: 768px) { 
+        /*font-size: 38px;*/
+        /*top: -220px;*/
+    }
+}
+
+.ogte-main-title span {
+    
+    font-family: "Archivo-Regular";
+    color: $blue-90;
+    font-size: 20px;
+
+    @media (min-width: 576px) { 
+        font-size: 22px;
+    }
+
+    @media (min-width: 768px) { 
+        /*font-size: 24px;*/
+    }
+}
+
+.ogte-section-title {
+    /*
+    padding-left: 15px;
+    padding-right: 15px;
+    */
+    text-align: left;
+    color: $primary;
+    margin-bottom: 24px;
+
+    /*
+    @media (min-width: 768px) { 
+        margin-top: 18px;
+    }
+
+    @media (min-width: 992px) { 
+        margin-top: 36px;
+        margin-bottom: 60px;
+    }
+    */
+}
+
+.ogte-wide {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid $gray-50;
+    border-radius: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &.ogte-passage-editor {
+        padding: 24px 24px 24px 24px;
+
+        @media (min-width: 576px) { 
+            padding: 24px 24px 150px 24px;
+        }
+        
+    }
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-secondary:focus, 
+.btn-secondary.focus,
+.btn-success:focus,
+.btn-success.focus {
+    outline: none;
+    box-shadow: inset 0 0 0 0 transparent;
+}
+
+.btn.btn-secondary.ogte_clipboardbutton, 
+.btn.btn-secondary.ogte_downloadbutton {
+    padding: 19px;
+    border-color: transparent;
+}
+
+
+/* 
+    NAVIGATION PILLS 
+    Styles applied to the tabsandeditor.mustache template 
+*/
+
+.nav-link.focus, 
+.nav-link:focus,
+.nav-pills .nav-link.active:not(:disabled):not(.disabled).active:focus  {
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.nav-pills .nav-link {
+    color: $black;
+    background-color: $gray-05;
+    border-color: $gray-05;
+}
+
+.nav-pills .nav-link.active:not(:disabled):not(.disabled).active {
+    color: $white;
+    background-color: $blue-90;
+    border-color: $blue-90;
+}
+
+.mod_ogte_nav-pills {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /*position: absolute;*/
+    /*top: -234px;*/
+    width: 100%;
+    border: 1px solid $gray-20;
+    /*box-shadow: 0px 1px 6.39px -2px rgba(0, 0, 0, 0.16) inset;*/
+    border-radius: 12px;
+    transform: scale(0.9);
+
+    @media (min-width: 576px) { 
+        /*top: -134px;*/
+    }
+
+    @media (min-width: 768px) {
+        /*top: -126px;*/
+        transform: scale(1);
+        height: 60px;
+        max-width: fit-content;
+        padding: 2px;
+        gap: 6px;
+        align-items: center;
+    }
+}
+
+.mod_ogte_nav-pills-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.nav-pills.mod_ogte_nav-pills {
+    background-color: $gray-05;
+}
+
+@media (min-width: 576px) {
+    .mod_ogte_nav-pills {
+        flex-direction: row;
+    }
+}
+
+.nav-link.article-leveler,
+.nav-link.article-generator,
+.nav-link.article-rewriter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link.article-leveler::before,
+.nav-link.article-generator::before,
+.nav-link.article-rewriter::before {
+    /*background-color: $blue-10;*/
+    background-size: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #e1e9ff;
+}
+
+.nav-link.article-leveler.active::before,
+.nav-link.article-generator.active::before,
+.nav-link.article-rewriter.active::before {
+    background-color: #4578fb;
+    border: 1px solid #5786ff;
+}
+
+.article-leveler::before {
+    content: url([[pix:theme|text-leveler-icon-blue]]);
+    padding-top: 6px;
+    @media (min-width: 768px) {
+        padding-left: 8px;
+    }
+}
+
+.article-leveler.active::before {
+    content: url([[pix:theme|text-leveler-icon-white]]);
+    padding-top: 6px;
+}
+
+.article-generator::before {
+    content: url([[pix:theme|text-generator-icon-blue]]);
+    padding-top: 8px;
+    @media (min-width: 768px) {
+        padding-left: 8px;
+    }
+}
+
+.article-generator.active::before {
+    content: url([[pix:theme|text-generator-icon-white]]);
+    padding-top: 8px;
+}
+
+.article-rewriter::before {
+    content: url([[pix:theme|text-rewriter-icon-blue]]);
+    padding-top: 7px;
+    @media (min-width: 768px) {
+        padding-left: 8px;
+    }
+}
+
+.article-rewriter.active::before {
+    content: url([[pix:theme|text-rewriter-icon-white]]);
+    padding-top: 7px;
+}
+
+/* 
+    ARTICLE LEVELER 
+    Styles applied to the articleleveler.mustache template 
+*/
+
+.ogte-panel-instructions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+.ogte-leftright {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        gap: 24px;
+    }
+}
+
+.the-go-button {
+    margin-top: auto;
+}
+
+#the_al_button.btn-success {
+    background-color: $blue-90;
+    border-color: $blue-90;
+    height: 48px;
+    padding-left: 36px;
+    padding-right: 36px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* side stats */
+.ogte-blocks {
+    display: flex; /* Will be set to none by default when the previous JS adaptation is done) */
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: 1200px) {
+        width: 30%;
+    }
+}
+
+.ogte-blocks-group-1,
+.ogte-blocks-group-2 {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+    }
+
+    @media (min-width: 1200px) {
+        flex-direction: column;
+    }
+}
+
+.ogte-outof_container {
+    width: 100%;
+}
+
+.ogte-gopanel {
+    margin: 0 0 12px 0;
+    gap: 12px;
+}
+
+.ogte-gopanel select {
+    min-height: 48px;
+    min-width: 200px;
+    border-color: $gray-50;
+}
+
+.ignorelist-container {
+    margin-bottom: 48px;
+}
+
+.ignorelist-label {
+    color: $blue-90;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#the_al_levelstats {
+    margin-bottom: 24px;
+}
+
+#the_al_levelstats.ogte-wide {
+    border: none !important;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: auto;
+}
+
+#the_al_levelstats tr {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+    }
+}
+
+#the_al_levelstats td {
+    background-color: $blue-10;
+    color: $blue-100;
+    border-radius: 12px;
+    border: none;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    height: 124px;
+    width: 100%;
+}
+
+#the_al_levelstats td.ogte_listleveltitle {
+    display: none;
+}
+
+#the_al_levelstats .ogte_stats_td_hd {
+    font-size: 13px;
+}
+
+#the_al_levelstats td.mod_ogte_propernouns {
+    background-color: $purple-10;
+    color: $purple-100;
+}
+
+#the_al_levelstats td.mod_ogte_outoflist {
+    background-color: $red-10;
+    color: $red-100;
+}
+
+#the_al_levelstats td.mod_ogte_ignored {
+    background-color: $green-10;
+    color: $green-100;
+}
+
+/* Overriding OGTE mod rule */
+span.mod_ogte_outoflist {
+    color: $red-100;
+}
+
+span.mod_ogte_ignored {
+    color: $green-100;
+}
+
+#the_al_articlestats {
+    margin-top: 0;
+
+    @media (min-width: 576px) {
+        margin-top: -92px;
+    }
+}
+
+#the_al_articlestats.ogte-wide {
+    border: none;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: 576px) {
+        border-top: 1px solid $gray-50;
+    }
+}
+
+#the_al_articlestats tr {
+    display: flex;
+    gap: 6px;
+    padding-right: 0;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    height: 100%;
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+        margin-top: 0;
+        padding-right: 24px;
+        height: 90px;
+    }
+}
+
+#the_al_articlestats td {
+    color: $gray-80;
+    border: none;
+    display:  flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+    /*border-bottom: 1px solid $gray-30;*/
+    border: 1px solid #BDC2DB;
+
+    @media (min-width: 576px) {
+        flex-direction: column;
+        align-items: flex-end;
+        border: none;
+    }
+}
+
+@media (min-width: 576px) {
+    #the_al_articlestats td:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 64px;
+        border-left: 1px solid $gray-30;
+        left: 0;
+    }
+
+    #the_al_articlestats td:first-child::before {
+        border-left: none;
+    }
+}
+
+#the_al_articlestats .ogte_stats_td_hd {
+    font-size: 13px;
+    font-style: italic;
+}
+
+#the_al_articlestats table {
+    margin-bottom: 12px;
+}
+
+.ogte_stats-letter {
+    background-color: #fff;
+    width: 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    height: 24px;
+    border: 1px solid;
+}
+
+.ogte_stats-letter-container {
+    display: flex;
+    align-items: center;
+}
+
+.ogte_stats-letter-plus {
+    width: 16px;
+    font-size: 14px;
+    height: 24px;
+}
+
+#the_al_passage.ogte-wide {
+    min-height: 290px;
+}
+
+.mod-ogte-passage-opts {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.ogte_article_copy_button, 
+.ogte_article_download_button {
+    width: 40px;
+    height: 40px;
+    margin-left: 12px;
+    background-color: $secondary;
+    border-radius: 6px;
+}
+
+.ogte_article_download_button .btn {
+    background-size: 17px;
+}
+
+.ogte-block-title {
+    background-color: #ECEFFB;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+.outof_table th {
+    color: #414d6a;
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+.ogte-outof_container {
+    border: none;
+    padding: 12px;
+}
+
+.ogte-outof_container table {
+    width: 100%;
+}
+
+.ogte-outof_container tbody tr:nth-child(2n+1) {
+    background-color: transparent;
+}
+
+.ogte-blocks tr th:last-of-type,
+.ogte-blocks tr td:last-of-type {
+    text-align: right;
+}
+
+
+/* 
+    ARTICLE GENERATOR
+    Styles applied to the articlegenerator.mustache template
+*/
+
+#articlegenerator .btn-primary {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.ogte_generator_stats {
+    margin-top: 0;
+}
+
+.ogte_generator_stats tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-right: 24px;
+    background-color: #F4F5FA;
+    margin-top: 24px;
+    border-radius: 6px;
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+    }
+}
+
+.ogte_generator_stats td {
+    color: $blue-90;
+    border: none;
+    display:  flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: 576px) {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 576px) {
+    .ogte_generator_stats td:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 64px;
+        border-left: 1px solid $gray-30;
+        left: 0;
+    }
+
+    .ogte_generator_stats td:first-child::before {
+        border-left: none;
+    }
+}
+
+.ogte_generator_stats .ogte_stats_td_hd {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.ogte_generator_stats table {
+    margin-bottom: 12px;
+}
+
+#the_ag_article {
+    padding: 24px 24px 150px 24px;
+    min-height: 400px;
+}
+
+/*
+    ARTICLE REWRITER
+    Styles applied to the articlerewriter.mustache template
+*/
+
+.row.article-rewriter-row {
+    h4 {
+        font-size: 18px;
+        color: $gray-90;
+    }
+
+    /* When screen is bigger than 992px, the content displays in two columns */
+    @media (min-width: 992px) {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+}
+
+.column-always-visible {
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+#articlerewriter .btn-primary {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    width: auto !important;
+}
+
+#articlerewriter textarea {
+    padding: 24px 24px 150px 24px;
+    min-height: 400px;
+}
+
+.ogte_rewriter_stats {
+    margin-top: 0;
+}
+
+.ogte_rewriter_stats tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-right: 12px;
+    background-color: #F4F5FA;
+    margin-top: 24px;
+    border-radius: 6px;
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+    }
+
+    @media (min-width: 992px) {
+        padding-right: 2px;
+    }
+}
+
+.ogte_rewriter_stats td {
+    color: $blue-90;
+    border: none;
+    display:  flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: 576px) {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 18px;
+        gap: 4px;
+    }
+}
+
+@media (min-width: 576px) {
+    .ogte_rewriter_stats td:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 64px;
+        border-left: 1px solid $gray-30;
+        left: 0;
+    }
+
+    .ogte_rewriter_stats td:first-child::before {
+        border-left: none;
+    }
+}
+
+.ogte_rewriter_stats .ogte_stats_td_hd {
+    font-size: 13px;
+    font-style: italic;
+
+    @media (min-width: 992px) {
+        font-size: 12px;
+    }
+}
+
+.ogte_rewriter_stats table {
+    margin-bottom: 12px;
+}
+
+/* JS change needed: the functions triggered by the #difficulty-choice fieldset input 'active' attribute should be tiggered now by the '.active' class instead: '#difficulty-choice input.active' */
+
+#difficulty-choice {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 36px;
+}
+
+#difficulty-choice legend {
+    font-size: 15px;
+    color: $blue-90;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+#difficulty-choice .btn.btn-secondary {
+    color: $blue-90;
+    padding: 8px 12px;
+    font-weight: 400;
+    border-radius: 0;
+    border: 1px solid $white;
+    background-color: $blue-10;
+
+    &:first-of-type {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+    &:last-of-type {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
+
+#difficulty-choice .btn-secondary:not(:disabled):not(.disabled).active {
+    color: $white;
+    background-color: $blue-90;
+    border-color: $blue-90;
+}
+
+#articlerewriter .ogte_sendtoeditor_button {
+    margin-top: 12px;
+
+    @media (min-width: 992px) {
+        margin-top: 62px;
+    }
+}
+
+
+/* 
+    FOOTER
+    Styles applied to the tabsandeditor.mustache template 
+*/
+
+.ogte-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-top: 72px;
+    background-color: $gray-05;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 6px;
+}
+
+.ogte-logo {
+    content: url([[pix:theme|ngsl_black_logo]]);
+    height: 130px;
+    width: auto;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.ogte-copyright {
+    margin-bottom: 0;
+}
