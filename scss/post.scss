@@ -635,7 +635,8 @@ span.mod_ogte_ignored {
 }
 
 .ogte_article_copy_button, 
-.ogte_article_download_button {
+.ogte_article_download_button,
+.ogte_article_clear_button {
     width: 40px;
     height: 40px;
     margin-left: 12px;
@@ -643,7 +644,9 @@ span.mod_ogte_ignored {
     border-radius: 6px;
 }
 
-.ogte_article_download_button .btn {
+.ogte_article_download_button .btn,
+.ogte_article_clear_button .btn,
+{
     background-size: 17px;
 }
 
