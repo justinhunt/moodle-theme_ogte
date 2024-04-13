@@ -301,6 +301,7 @@ body.limitedwidth #page.drawers .main-inner {
 
 .nav-link.article-leveler,
 .nav-link.article-generator,
+.nav-link.site-faq,
 .nav-link.article-rewriter {
     display: flex;
     justify-content: center;
@@ -309,6 +310,7 @@ body.limitedwidth #page.drawers .main-inner {
 
 .nav-link.article-leveler::before,
 .nav-link.article-generator::before,
+.nav-link.site-faq::before,
 .nav-link.article-rewriter::before {
     /*background-color: $blue-10;*/
     background-size: 36px;
@@ -322,6 +324,7 @@ body.limitedwidth #page.drawers .main-inner {
 
 .nav-link.article-leveler.active::before,
 .nav-link.article-generator.active::before,
+.nav-link.site-faq.active::before,
 .nav-link.article-rewriter.active::before {
     background-color: #4578fb;
     border: 1px solid #5786ff;
@@ -364,6 +367,19 @@ body.limitedwidth #page.drawers .main-inner {
 .article-rewriter.active::before {
     content: url([[pix:theme|text-rewriter-icon-white]]);
     padding-top: 7px;
+}
+
+.site-faq::before {
+    content: url([[pix:theme|site-faq-icon-blue]]);
+    padding-top: 6px;
+    @media (min-width: 768px) {
+        padding-left: 8px;
+    }
+}
+
+.site-faq.active::before {
+    content: url([[pix:theme|site-faq-icon-white]]);
+    padding-top: 6px;
 }
 
 /* 
